@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://cd24k4ts8n3dw"]
+
+[ext_resource type="Texture2D" uid="uid://c14wdf48bj1mc" path="res://assets/circle.png" id="1_yeftp"]
+[ext_resource type="Texture2D" uid="uid://cmeubf0duwpdb" path="res://assets/rectangle.png" id="2_cshbl"]
+[ext_resource type="Texture2D" uid="uid://drs6rfyx5fhe8" path="res://assets/v-rectangle-heavy.png" id="3_0gtow"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qxn2e"]
+bounce = 0.5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cshbl"]
+radius = 42.426407
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gtow"]
+size = Vector2(261, 47)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cshbl"]
+size = Vector2(48, 262)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Circle" type="RigidBody2D" parent="."]
+position = Vector2(1185, 239)
+mass = 5.0
+physics_material_override = SubResource("PhysicsMaterial_qxn2e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Circle"]
+shape = SubResource("CircleShape2D_cshbl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Circle"]
+position = Vector2(0, 2.3245811e-06)
+scale = Vector2(0.2, 0.202)
+texture = ExtResource("1_yeftp")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(1186, 310)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_0gtow")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+texture = ExtResource("2_cshbl")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2(1078, 467)
+mass = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+shape = SubResource("RectangleShape2D_cshbl")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D2"]
+texture = ExtResource("3_0gtow")
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="."]
+position = Vector2(1293, 467)
+mass = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
+shape = SubResource("RectangleShape2D_cshbl")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D3"]
+texture = ExtResource("3_0gtow")

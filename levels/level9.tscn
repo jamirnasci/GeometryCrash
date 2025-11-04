@@ -1,0 +1,124 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbee3uvinmtdk"]
+
+[ext_resource type="Texture2D" uid="uid://dw7rf64phryc5" path="res://assets/square.png" id="1_lwt4d"]
+[ext_resource type="Texture2D" uid="uid://cmeubf0duwpdb" path="res://assets/rectangle.png" id="2_tcv6n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcv6n"]
+size = Vector2(46, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7pi5"]
+size = Vector2(263, 46)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Square" type="RigidBody2D" parent="."]
+position = Vector2(883, 538)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square"]
+shape = SubResource("RectangleShape2D_tcv6n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Square"]
+texture = ExtResource("1_lwt4d")
+
+[node name="Square2" type="RigidBody2D" parent="."]
+position = Vector2(1098, 538)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square2"]
+shape = SubResource("RectangleShape2D_tcv6n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Square2"]
+texture = ExtResource("1_lwt4d")
+
+[node name="Rectangle" type="RigidBody2D" parent="."]
+position = Vector2(991, 489)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rectangle"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_h7pi5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Rectangle"]
+texture = ExtResource("2_tcv6n")
+
+[node name="Square3" type="RigidBody2D" parent="."]
+position = Vector2(883, 440)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square3"]
+shape = SubResource("RectangleShape2D_tcv6n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Square3"]
+texture = ExtResource("1_lwt4d")
+
+[node name="Square4" type="RigidBody2D" parent="."]
+position = Vector2(1098, 440)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square4"]
+shape = SubResource("RectangleShape2D_tcv6n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Square4"]
+texture = ExtResource("1_lwt4d")
+
+[node name="Rectangle2" type="RigidBody2D" parent="."]
+position = Vector2(991, 391)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rectangle2"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_h7pi5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Rectangle2"]
+texture = ExtResource("2_tcv6n")
+
+[node name="Square5" type="RigidBody2D" parent="."]
+position = Vector2(883, 343)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square5"]
+shape = SubResource("RectangleShape2D_tcv6n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Square5"]
+texture = ExtResource("1_lwt4d")
+
+[node name="Square6" type="RigidBody2D" parent="."]
+position = Vector2(1098, 343)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square6"]
+shape = SubResource("RectangleShape2D_tcv6n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Square6"]
+texture = ExtResource("1_lwt4d")
+
+[node name="Rectangle3" type="RigidBody2D" parent="."]
+position = Vector2(991, 294)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rectangle3"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_h7pi5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Rectangle3"]
+texture = ExtResource("2_tcv6n")
+
+[node name="Square7" type="RigidBody2D" parent="."]
+position = Vector2(883, 245)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square7"]
+shape = SubResource("RectangleShape2D_tcv6n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Square7"]
+texture = ExtResource("1_lwt4d")
+
+[node name="Square8" type="RigidBody2D" parent="."]
+position = Vector2(1098, 245)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square8"]
+shape = SubResource("RectangleShape2D_tcv6n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Square8"]
+texture = ExtResource("1_lwt4d")
+
+[node name="Rectangle4" type="RigidBody2D" parent="."]
+position = Vector2(991, 196)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rectangle4"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_h7pi5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Rectangle4"]
+texture = ExtResource("2_tcv6n")

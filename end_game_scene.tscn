@@ -1,0 +1,127 @@
+[gd_scene load_steps=12 format=3 uid="uid://cemnvreyuxgvr"]
+
+[ext_resource type="Script" uid="uid://ctwoicpf2ikk4" path="res://end_game_scene.gd" id="1_v2e6o"]
+[ext_resource type="StyleBox" uid="uid://dipmrtjlt8af8" path="res://styles/menu_button.tres" id="2_u0doh"]
+[ext_resource type="StyleBox" uid="uid://dug3a5axg1q4l" path="res://styles/menu_button_pressed.tres" id="3_wm14k"]
+[ext_resource type="StyleBox" uid="uid://dpc27cmerh6pg" path="res://styles/menu_button_hover.tres" id="4_wlg05"]
+
+[sub_resource type="Gradient" id="Gradient_4bcvy"]
+colors = PackedColorArray(0.6627451, 0.003921569, 0.93333334, 1, 0.24576199, 0.0004255721, 0.35916114, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_v2e6o"]
+gradient = SubResource("Gradient_4bcvy")
+fill_from = Vector2(0.5157233, 1)
+fill_to = Vector2(0.509434, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4fodd"]
+
+[sub_resource type="Theme" id="Theme_uvag0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u0doh"]
+bg_color = Color(0.72700983, 0.00040920766, 0.7284304, 1)
+corner_radius_top_left = 60
+corner_radius_bottom_right = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wm14k"]
+bg_color = Color(0.6754932, 0.0016580081, 0.8423955, 1)
+corner_radius_top_left = 60
+corner_radius_bottom_right = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wlg05"]
+bg_color = Color(0.5378767, 0.00075719296, 0.64408445, 1)
+corner_radius_top_left = 60
+corner_radius_bottom_right = 60
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v2e6o")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(2, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(681.5, 321.5)
+scale = Vector2(21.328127, 10.078125)
+texture = SubResource("GradientTexture2D_v2e6o")
+
+[node name="EndTitle" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_right = 250.0
+offset_bottom = 83.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 60
+text = "Title"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -85.0
+offset_right = 250.0
+offset_bottom = 223.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayAgainButton" type="Button" parent="VBoxContainer"]
+material = SubResource("ShaderMaterial_4fodd")
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme = SubResource("Theme_uvag0")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_u0doh")
+theme_override_styles/pressed = ExtResource("3_wm14k")
+theme_override_styles/hover = ExtResource("4_wlg05")
+theme_override_styles/focus = ExtResource("2_u0doh")
+text = "Play Again"
+
+[node name="LevelsButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm14k")
+theme_override_styles/pressed = ExtResource("3_wm14k")
+theme_override_styles/hover = ExtResource("4_wlg05")
+text = "Levels"
+
+[node name="MenuButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_wlg05")
+theme_override_styles/pressed = ExtResource("3_wm14k")
+theme_override_styles/hover = ExtResource("4_wlg05")
+text = "Menu"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_top = 121.0
+offset_right = 1366.0
+offset_bottom = 196.0
+
+[node name="EarnedCoins" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.9629393, 0.56946194, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Earned Coins"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/PlayAgainButton" to="." method="_on_play_again_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/LevelsButton" to="." method="_on_levels_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]

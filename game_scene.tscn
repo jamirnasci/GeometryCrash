@@ -1,0 +1,189 @@
+[gd_scene load_steps=24 format=3 uid="uid://co51o07o1nl66"]
+
+[ext_resource type="Texture2D" uid="uid://dvllirhr5jewf" path="res://assets/cannon1.png" id="1_mlf6e"]
+[ext_resource type="Script" uid="uid://d0nre6vqgw2xw" path="res://game_scene.gd" id="1_po0ka"]
+[ext_resource type="Texture2D" uid="uid://c42rh02pvk6rc" path="res://levels_bg/forest.png" id="2_kdryc"]
+[ext_resource type="Script" uid="uid://b1dcmyq3nvlsk" path="res://camera_2d.gd" id="2_mj2jn"]
+[ext_resource type="Texture2D" uid="uid://cfjmnm8klf760" path="res://assets/grass-ground.png" id="4_mixcd"]
+[ext_resource type="StyleBox" uid="uid://dkea8wefx1bhb" path="res://styles/game_button.tres" id="6_kdryc"]
+[ext_resource type="Texture2D" uid="uid://ca2mp8ix2oou7" path="res://assets/wheel.png" id="7_6e45b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mixcd"]
+size = Vector2(1702, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mj2jn"]
+size = Vector2(25.5, 665)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdryc"]
+size = Vector2(42, 661)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6e45b"]
+size = Vector2(1700.5, 152)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6e45b"]
+bg_color = Color(0.5176471, 0.3254902, 1, 0.63529414)
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kdryc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ueiaa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6e45b"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_e35lh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_udeyl"]
+bg_color = Color(0.5176471, 0.3254902, 1, 0.63529414)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e35lh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_miq82"]
+bg_color = Color(0.5176471, 0.3254902, 1, 0.63529414)
+corner_radius_top_left = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_udeyl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5hk1"]
+bg_color = Color(0.5176471, 0.3254902, 1, 0.63529414)
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_miq82"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j5hk1"]
+
+[node name="GameScene" type="Node2D"]
+script = ExtResource("1_po0ka")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(850, 450)
+texture = ExtResource("2_kdryc")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+script = ExtResource("2_mj2jn")
+
+[node name="Player" type="StaticBody2D" parent="."]
+
+[node name="PlayerSprite" type="Sprite2D" parent="Player"]
+position = Vector2(239.00002, 500)
+scale = Vector2(0.3260309, 0.31854823)
+texture = ExtResource("1_mlf6e")
+
+[node name="top" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="top"]
+position = Vector2(851, 0)
+shape = SubResource("RectangleShape2D_mixcd")
+
+[node name="Left" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
+position = Vector2(-14.25, 320.5)
+shape = SubResource("RectangleShape2D_mj2jn")
+
+[node name="Right" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
+position = Vector2(1721, 321)
+shape = SubResource("RectangleShape2D_kdryc")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="GroundSprite" type="Sprite2D" parent="Ground"]
+position = Vector2(850, 599)
+texture = ExtResource("4_mixcd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(850.75, 624)
+shape = SubResource("RectangleShape2D_6e45b")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DownButton" type="Button" parent="CanvasLayer"]
+offset_left = 42.0
+offset_top = 455.0
+offset_right = 142.0
+offset_bottom = 515.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_6e45b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kdryc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ueiaa")
+text = "v"
+
+[node name="UpButton" type="Button" parent="CanvasLayer"]
+offset_left = 42.0
+offset_top = 387.0
+offset_right = 142.0
+offset_bottom = 447.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("6_kdryc")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6e45b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ueiaa")
+text = "^"
+icon = SubResource("ImageTexture_e35lh")
+
+[node name="FireButton" type="Button" parent="CanvasLayer"]
+offset_left = 1191.0
+offset_top = 449.0
+offset_right = 1272.0
+offset_bottom = 523.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_udeyl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_e35lh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ueiaa")
+text = "Fire"
+
+[node name="LeftCamera" type="Button" parent="CanvasLayer"]
+offset_left = 1107.0
+offset_top = 449.0
+offset_right = 1188.0
+offset_bottom = 523.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_miq82")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_udeyl")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ueiaa")
+text = "<"
+
+[node name="RightCamera" type="Button" parent="CanvasLayer"]
+offset_left = 1275.0
+offset_top = 449.0
+offset_right = 1356.0
+offset_bottom = 523.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_j5hk1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_miq82")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_j5hk1")
+text = ">"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 86.0
+offset_bottom = 50.0
+
+[node name="BulletsTitle" type="Label" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Bullets: "
+vertical_alignment = 1
+
+[node name="BulletsN" type="Label" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+vertical_alignment = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(220, 513.25)
+scale = Vector2(0.18021204, 0.17840928)
+texture = ExtResource("7_6e45b")
+
+[connection signal="button_down" from="CanvasLayer/DownButton" to="." method="_on_down_button_button_down"]
+[connection signal="button_up" from="CanvasLayer/DownButton" to="." method="_on_down_button_button_up"]
+[connection signal="button_down" from="CanvasLayer/UpButton" to="." method="_on_up_button_button_down"]
+[connection signal="button_up" from="CanvasLayer/UpButton" to="." method="_on_up_button_button_up"]
+[connection signal="pressed" from="CanvasLayer/FireButton" to="." method="_on_fire_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/LeftCamera" to="." method="_on_left_camera_pressed"]
+[connection signal="pressed" from="CanvasLayer/RightCamera" to="." method="_on_right_camera_pressed"]

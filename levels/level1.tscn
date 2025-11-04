@@ -1,0 +1,159 @@
+[gd_scene load_steps=8 format=3 uid="uid://yhgqug4re362"]
+
+[ext_resource type="Texture2D" uid="uid://dw7rf64phryc5" path="res://assets/square.png" id="1_sjb42"]
+[ext_resource type="Texture2D" uid="uid://cmeubf0duwpdb" path="res://assets/rectangle.png" id="2_pdtm5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pdtm5"]
+size = Vector2(48, 48)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sjb42"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sjb42"]
+size = Vector2(48, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b3oru"]
+size = Vector2(262, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ua5ty"]
+size = Vector2(262, 46)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Square2" type="RigidBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Square2"]
+position = Vector2(1306, 498)
+texture = ExtResource("1_sjb42")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square2"]
+position = Vector2(1306, 498)
+shape = SubResource("RectangleShape2D_pdtm5")
+
+[node name="Square1" type="RigidBody2D" parent="."]
+position = Vector2(1306, 429)
+physics_material_override = SubResource("PhysicsMaterial_sjb42")
+
+[node name="Sprite2D" type="Sprite2D" parent="Square1"]
+position = Vector2(0, 20)
+texture = ExtResource("1_sjb42")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square1"]
+position = Vector2(0, 20)
+shape = SubResource("RectangleShape2D_sjb42")
+
+[node name="Square3" type="RigidBody2D" parent="."]
+position = Vector2(1306, 331)
+physics_material_override = SubResource("PhysicsMaterial_sjb42")
+
+[node name="Sprite2D" type="Sprite2D" parent="Square3"]
+position = Vector2(0, 20)
+texture = ExtResource("1_sjb42")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square3"]
+position = Vector2(0, 20)
+shape = SubResource("RectangleShape2D_sjb42")
+
+[node name="Square4" type="RigidBody2D" parent="."]
+position = Vector2(1306, 380)
+physics_material_override = SubResource("PhysicsMaterial_sjb42")
+
+[node name="Sprite2D" type="Sprite2D" parent="Square4"]
+position = Vector2(0, 20)
+texture = ExtResource("1_sjb42")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square4"]
+position = Vector2(0, 20)
+shape = SubResource("RectangleShape2D_sjb42")
+
+[node name="Square5" type="RigidBody2D" parent="."]
+position = Vector2(-210, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Square5"]
+position = Vector2(1306, 498)
+texture = ExtResource("1_sjb42")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square5"]
+position = Vector2(1306, 498)
+shape = SubResource("RectangleShape2D_pdtm5")
+
+[node name="Square6" type="RigidBody2D" parent="."]
+position = Vector2(1096, 429)
+physics_material_override = SubResource("PhysicsMaterial_sjb42")
+
+[node name="Sprite2D" type="Sprite2D" parent="Square6"]
+position = Vector2(0, 20)
+texture = ExtResource("1_sjb42")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square6"]
+position = Vector2(0, 20)
+shape = SubResource("RectangleShape2D_sjb42")
+
+[node name="Square7" type="RigidBody2D" parent="."]
+position = Vector2(1096, 331)
+physics_material_override = SubResource("PhysicsMaterial_sjb42")
+
+[node name="Sprite2D" type="Sprite2D" parent="Square7"]
+position = Vector2(0, 20)
+texture = ExtResource("1_sjb42")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square7"]
+position = Vector2(0, 20)
+shape = SubResource("RectangleShape2D_sjb42")
+
+[node name="Square8" type="RigidBody2D" parent="."]
+position = Vector2(1095, 234)
+physics_material_override = SubResource("PhysicsMaterial_sjb42")
+
+[node name="Sprite2D" type="Sprite2D" parent="Square8"]
+position = Vector2(0, 20)
+texture = ExtResource("1_sjb42")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square8"]
+position = Vector2(0, 20)
+shape = SubResource("RectangleShape2D_sjb42")
+
+[node name="Square9" type="RigidBody2D" parent="."]
+position = Vector2(1309, 234)
+physics_material_override = SubResource("PhysicsMaterial_sjb42")
+
+[node name="Sprite2D" type="Sprite2D" parent="Square9"]
+position = Vector2(0, 20)
+texture = ExtResource("1_sjb42")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square9"]
+position = Vector2(0, 20)
+shape = SubResource("RectangleShape2D_sjb42")
+
+[node name="Square10" type="RigidBody2D" parent="."]
+position = Vector2(1096, 380)
+physics_material_override = SubResource("PhysicsMaterial_sjb42")
+
+[node name="Sprite2D" type="Sprite2D" parent="Square10"]
+position = Vector2(0, 20)
+texture = ExtResource("1_sjb42")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square10"]
+position = Vector2(0, 20)
+shape = SubResource("RectangleShape2D_sjb42")
+
+[node name="Rectangle" type="RigidBody2D" parent="."]
+position = Vector2(0, 22)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rectangle"]
+position = Vector2(1201, 280)
+shape = SubResource("RectangleShape2D_b3oru")
+
+[node name="Sprite2D" type="Sprite2D" parent="Rectangle"]
+position = Vector2(1201.5, 280)
+texture = ExtResource("2_pdtm5")
+
+[node name="Rectangle2" type="RigidBody2D" parent="."]
+position = Vector2(1, -76)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rectangle2"]
+position = Vector2(1201, 279)
+shape = SubResource("RectangleShape2D_ua5ty")
+
+[node name="Sprite2D" type="Sprite2D" parent="Rectangle2"]
+position = Vector2(1201.5, 280)
+texture = ExtResource("2_pdtm5")
