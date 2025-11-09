@@ -4,15 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://cmeubf0duwpdb" path="res://assets/rectangle.png" id="2_tcv6n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tcv6n"]
-size = Vector2(46, 48)
+size = Vector2(28, 28)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h7pi5"]
-size = Vector2(263, 46)
+size = Vector2(155, 28)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Square" type="RigidBody2D" parent="."]
-position = Vector2(883, 538)
+position = Vector2(943, 538)
+gravity_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Square"]
 shape = SubResource("RectangleShape2D_tcv6n")
@@ -21,7 +22,8 @@ shape = SubResource("RectangleShape2D_tcv6n")
 texture = ExtResource("1_lwt4d")
 
 [node name="Square2" type="RigidBody2D" parent="."]
-position = Vector2(1098, 538)
+position = Vector2(1070, 538)
+gravity_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Square2"]
 shape = SubResource("RectangleShape2D_tcv6n")
@@ -30,7 +32,8 @@ shape = SubResource("RectangleShape2D_tcv6n")
 texture = ExtResource("1_lwt4d")
 
 [node name="Rectangle" type="RigidBody2D" parent="."]
-position = Vector2(991, 489)
+position = Vector2(1007, 509)
+gravity_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rectangle"]
 position = Vector2(-0.5, 0)
@@ -40,7 +43,8 @@ shape = SubResource("RectangleShape2D_h7pi5")
 texture = ExtResource("2_tcv6n")
 
 [node name="Square3" type="RigidBody2D" parent="."]
-position = Vector2(883, 440)
+position = Vector2(943, 480)
+gravity_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Square3"]
 shape = SubResource("RectangleShape2D_tcv6n")
@@ -49,7 +53,8 @@ shape = SubResource("RectangleShape2D_tcv6n")
 texture = ExtResource("1_lwt4d")
 
 [node name="Square4" type="RigidBody2D" parent="."]
-position = Vector2(1098, 440)
+position = Vector2(1070, 480)
+gravity_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Square4"]
 shape = SubResource("RectangleShape2D_tcv6n")
@@ -58,7 +63,8 @@ shape = SubResource("RectangleShape2D_tcv6n")
 texture = ExtResource("1_lwt4d")
 
 [node name="Rectangle2" type="RigidBody2D" parent="."]
-position = Vector2(991, 391)
+position = Vector2(1007, 451)
+gravity_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rectangle2"]
 position = Vector2(-0.5, 0)
@@ -68,7 +74,8 @@ shape = SubResource("RectangleShape2D_h7pi5")
 texture = ExtResource("2_tcv6n")
 
 [node name="Square5" type="RigidBody2D" parent="."]
-position = Vector2(883, 343)
+position = Vector2(943, 422)
+gravity_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Square5"]
 shape = SubResource("RectangleShape2D_tcv6n")
@@ -77,7 +84,8 @@ shape = SubResource("RectangleShape2D_tcv6n")
 texture = ExtResource("1_lwt4d")
 
 [node name="Square6" type="RigidBody2D" parent="."]
-position = Vector2(1098, 343)
+position = Vector2(1070, 422)
+gravity_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Square6"]
 shape = SubResource("RectangleShape2D_tcv6n")
@@ -86,7 +94,8 @@ shape = SubResource("RectangleShape2D_tcv6n")
 texture = ExtResource("1_lwt4d")
 
 [node name="Rectangle3" type="RigidBody2D" parent="."]
-position = Vector2(991, 294)
+position = Vector2(1007, 393)
+gravity_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rectangle3"]
 position = Vector2(-0.5, 0)
@@ -96,7 +105,8 @@ shape = SubResource("RectangleShape2D_h7pi5")
 texture = ExtResource("2_tcv6n")
 
 [node name="Square7" type="RigidBody2D" parent="."]
-position = Vector2(883, 245)
+position = Vector2(943, 364)
+gravity_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Square7"]
 shape = SubResource("RectangleShape2D_tcv6n")
@@ -105,7 +115,8 @@ shape = SubResource("RectangleShape2D_tcv6n")
 texture = ExtResource("1_lwt4d")
 
 [node name="Square8" type="RigidBody2D" parent="."]
-position = Vector2(1098, 245)
+position = Vector2(1070, 364)
+gravity_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Square8"]
 shape = SubResource("RectangleShape2D_tcv6n")
@@ -114,7 +125,8 @@ shape = SubResource("RectangleShape2D_tcv6n")
 texture = ExtResource("1_lwt4d")
 
 [node name="Rectangle4" type="RigidBody2D" parent="."]
-position = Vector2(991, 196)
+position = Vector2(1007, 335)
+gravity_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rectangle4"]
 position = Vector2(-0.5, 0)

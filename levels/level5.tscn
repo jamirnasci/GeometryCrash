@@ -5,15 +5,15 @@
 [ext_resource type="Texture2D" uid="uid://cmeubf0duwpdb" path="res://assets/rectangle.png" id="3_bufqw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dsjn"]
-size = Vector2(48, 48)
+size = Vector2(28, 28)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ldkys"]
-size = Vector2(46, 261)
+size = Vector2(27, 154)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dm5g0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vp6pq"]
-size = Vector2(263, 48)
+size = Vector2(155, 28)
 
 [node name="Node2D" type="Node2D"]
 
@@ -21,26 +21,26 @@ size = Vector2(263, 48)
 position = Vector2(-161, -306)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Square"]
-position = Vector2(1292, 516)
+position = Vector2(1292, 602)
 shape = SubResource("RectangleShape2D_0dsjn")
 
 [node name="Sprite2D" type="Sprite2D" parent="Square"]
-position = Vector2(1292, 516)
+position = Vector2(1292, 602)
 texture = ExtResource("1_hydfx")
 
 [node name="Square2" type="RigidBody2D" parent="."]
 position = Vector2(-161, -356)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Square2"]
-position = Vector2(1292, 516)
+position = Vector2(1292, 623)
 shape = SubResource("RectangleShape2D_0dsjn")
 
 [node name="Sprite2D" type="Sprite2D" parent="Square2"]
-position = Vector2(1292, 516)
+position = Vector2(1292, 623)
 texture = ExtResource("1_hydfx")
 
 [node name="VRectangle" type="RigidBody2D" parent="."]
-position = Vector2(140, 0)
+position = Vector2(62, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VRectangle"]
 position = Vector2(1133, 417.5)
@@ -54,7 +54,7 @@ texture = ExtResource("2_s216a")
 position = Vector2(-2, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VRectangle2"]
-position = Vector2(1133, 417.5)
+position = Vector2(1132.5, 417)
 shape = SubResource("RectangleShape2D_ldkys")
 
 [node name="Sprite2D" type="Sprite2D" parent="VRectangle2"]
@@ -62,7 +62,7 @@ position = Vector2(1133, 417.5)
 texture = ExtResource("2_s216a")
 
 [node name="VRectangle3" type="RigidBody2D" parent="."]
-position = Vector2(-146, 0)
+position = Vector2(-65, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VRectangle3"]
 position = Vector2(1133, 417.5)
@@ -73,7 +73,7 @@ position = Vector2(1133, 417.5)
 texture = ExtResource("2_s216a")
 
 [node name="Rectangle" type="RigidBody2D" parent="."]
-position = Vector2(52, -53)
+position = Vector2(52, 11)
 physics_material_override = SubResource("PhysicsMaterial_dm5g0")
 gravity_scale = 0.5
 

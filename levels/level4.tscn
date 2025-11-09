@@ -6,17 +6,17 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lpgdq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1jw75"]
-size = Vector2(48, 48)
+size = Vector2(28, 28)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8s3b3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cc5tm"]
-size = Vector2(263, 48)
+size = Vector2(155, 28)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Square" type="RigidBody2D" parent="."]
-position = Vector2(1202, 398)
+position = Vector2(1196, 440)
 physics_material_override = SubResource("PhysicsMaterial_lpgdq")
 gravity_scale = 0.5
 
@@ -27,7 +27,7 @@ shape = SubResource("RectangleShape2D_1jw75")
 texture = ExtResource("1_cqjvr")
 
 [node name="Square2" type="RigidBody2D" parent="."]
-position = Vector2(1202, 448)
+position = Vector2(1196, 469)
 physics_material_override = SubResource("PhysicsMaterial_lpgdq")
 gravity_scale = 0.5
 
@@ -38,7 +38,7 @@ shape = SubResource("RectangleShape2D_1jw75")
 texture = ExtResource("1_cqjvr")
 
 [node name="Square3" type="RigidBody2D" parent="."]
-position = Vector2(1202, 498)
+position = Vector2(1196, 498)
 physics_material_override = SubResource("PhysicsMaterial_lpgdq")
 gravity_scale = 0.5
 
@@ -49,7 +49,7 @@ shape = SubResource("RectangleShape2D_1jw75")
 texture = ExtResource("1_cqjvr")
 
 [node name="Square4" type="RigidBody2D" parent="."]
-position = Vector2(1069, 398)
+position = Vector2(1069, 440)
 physics_material_override = SubResource("PhysicsMaterial_lpgdq")
 gravity_scale = 0.5
 
@@ -60,7 +60,7 @@ shape = SubResource("RectangleShape2D_1jw75")
 texture = ExtResource("1_cqjvr")
 
 [node name="Square5" type="RigidBody2D" parent="."]
-position = Vector2(1069, 448)
+position = Vector2(1069, 469)
 physics_material_override = SubResource("PhysicsMaterial_lpgdq")
 gravity_scale = 0.5
 
@@ -82,7 +82,7 @@ shape = SubResource("RectangleShape2D_1jw75")
 texture = ExtResource("1_cqjvr")
 
 [node name="Square7" type="RigidBody2D" parent="."]
-position = Vector2(1028, 295)
+position = Vector2(1069, 382)
 physics_material_override = SubResource("PhysicsMaterial_lpgdq")
 gravity_scale = 0.5
 
@@ -93,7 +93,7 @@ shape = SubResource("RectangleShape2D_1jw75")
 texture = ExtResource("1_cqjvr")
 
 [node name="Square8" type="RigidBody2D" parent="."]
-position = Vector2(1078, 295)
+position = Vector2(1098, 382)
 physics_material_override = SubResource("PhysicsMaterial_lpgdq")
 gravity_scale = 0.5
 
@@ -104,7 +104,7 @@ shape = SubResource("RectangleShape2D_1jw75")
 texture = ExtResource("1_cqjvr")
 
 [node name="Square9" type="RigidBody2D" parent="."]
-position = Vector2(1078, 245)
+position = Vector2(1098, 353)
 physics_material_override = SubResource("PhysicsMaterial_lpgdq")
 gravity_scale = 0.5
 
@@ -115,7 +115,7 @@ shape = SubResource("RectangleShape2D_1jw75")
 texture = ExtResource("1_cqjvr")
 
 [node name="Square10" type="RigidBody2D" parent="."]
-position = Vector2(1244, 296)
+position = Vector2(1196, 382)
 physics_material_override = SubResource("PhysicsMaterial_lpgdq")
 gravity_scale = 0.5
 
@@ -126,7 +126,7 @@ shape = SubResource("RectangleShape2D_1jw75")
 texture = ExtResource("1_cqjvr")
 
 [node name="Square11" type="RigidBody2D" parent="."]
-position = Vector2(1194, 296)
+position = Vector2(1167, 382)
 physics_material_override = SubResource("PhysicsMaterial_lpgdq")
 gravity_scale = 0.5
 
@@ -137,7 +137,7 @@ shape = SubResource("RectangleShape2D_1jw75")
 texture = ExtResource("1_cqjvr")
 
 [node name="Square12" type="RigidBody2D" parent="."]
-position = Vector2(1194, 246)
+position = Vector2(1167, 353)
 physics_material_override = SubResource("PhysicsMaterial_lpgdq")
 gravity_scale = 0.5
 
@@ -148,7 +148,7 @@ shape = SubResource("RectangleShape2D_1jw75")
 texture = ExtResource("1_cqjvr")
 
 [node name="Rectangle" type="RigidBody2D" parent="."]
-position = Vector2(1136, 346)
+position = Vector2(1132, 411)
 physics_material_override = SubResource("PhysicsMaterial_8s3b3")
 gravity_scale = 0.5
 
